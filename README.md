@@ -13,20 +13,20 @@
 ├── image                                 # 图标目录
 ├── lib                                   # 样式和js库
 ├── scripts                               # background/content_script/popup文件目录
-│   ├── bootom                           # [底层]
-│   │  ├── constant_bt.js               # 底层常量
-│   │  └── fn_bt.js		              # 底层工具方法
-│   ├── middle                           # [中间层]
-│   │  ├── message_md.js                # 通信工具方法
-│   │  ├── storage_md.js                # 存储工具方法
-│   │  ├── content_script_record_md.js  # 记录操作
-│   │  ├── content_script_oper_md.js    # 执行记录
-│   │  ├── content_script_md.js         # content_script中间层
-│   │  └── background.js		       # background中间层
-│   └── plugin			               # [应用层]
-│      ├── popup.js                      # popup页面脚本
-│      ├── content_script.js             # 植入页面脚本
-│      └── background.js		        # 后台脚本
+│   ├── bootom                            # [底层]
+│   │  ├── constant_bt.js                 # 底层常量
+│   │  └── fn_bt.js		          # 底层工具方法
+│   ├── middle                            # [中间层]
+│   │  ├── message_md.js                  # 通信工具方法
+│   │  ├── storage_md.js                  # 存储工具方法
+│   │  ├── content_script_record_md.js    # 记录操作
+│   │  ├── content_script_oper_md.js      # 执行记录
+│   │  ├── content_script_md.js           # content_script中间层
+│   │  └── background.js		          # background中间层
+│   └── plugin			          # [应用层]
+│      ├── popup.js                       # popup页面脚本
+│      ├── content_script.js              # 植入页面脚本
+│      └── background.js		          # 后台脚本
 └── manigest.json                         # 配置文件
 ```
 
@@ -38,14 +38,8 @@
 
 ## 缺陷
 
-- 虽然记录了每条记录的起始url,但是没有做跳转处理
-- 记录仍然是以列表的形式一起执行,而不是一条条执行(这个需要考虑存储和通信)
-- 后期需要优化记录以一条条的形式执行,这样可以对每一条记录进行跳转处理
 - 记录的跳转时间没有记录,这样一来同样的记录在不同PC上使用时可能因为网络问题而导致记录无法正确执行
 
-- 每条记录可以做跳转处理
-- 一条条执行记录
-- 仍然没有跳转时间记录
 
 
 ## 存储结构
