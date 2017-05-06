@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Excel导入功能</title>
+
+    <link rel="stylesheet" type="text/css" href="../lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/popup.css">
+
+</head>
+    <body>
+        <!-- 录制记录  -->
+        <div class="panel panel-success">
+            <div class="panel-body">
+                <div class="col-xs-12">
+                    <input type="text" class="form-control" id="recordName" placeholder="记录名称">
+                </div>
+                <div class="col-xs-5">
+                    <button id="start" type="button" class="btn btn-success">开始记录</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 操作记录 -->
+        <div class="panel panel-danger">
+            <div class="panel-body">
+                <div class="col-xs-12">
+                    <ul id="recordList" class="list-group">
+                    </ul>
+                </div>
+                <div class="col-xs-4">
+                    <button id="executive" type="button" class="btn btn-success">执行记录</button>
+                </div>
+                <div class="col-xs-4">
+                    <button id="save" type="button" class="btn btn-primary">保存记录</button>
+                </div>
+                <div class="col-xs-4">
+                    <button id="delete" type="button" class="btn btn-danger">删除记录</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="../lib/script/jquery.min.js"></script>
+        <script src="../scripts/bottom/constant_bt.js"></script>
+        <script src="../scripts/bottom/fn_bt.js"></script>
+        <script src="../scripts/middle/storage_md.js"></script>
+        <script src="../scripts/middle/message_md.js"></script>
+        <script src="../scripts/plugin/popup.js"></script>
+    </body>
+</html>
+

@@ -1,0 +1,22 @@
+
+html {
+    width: 330px;
+}
+
+div.row{
+   padding: 10px;
+   margin-bottom: 10px;
+   margin-top: 10px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+div.panel {
+    margin: 10px;
+}
+
+ul.list-group {
+    margin-bottom: 0;
+}

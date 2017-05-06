@@ -1,0 +1,66 @@
+{
+  "manifest_version": 2,
+  "name": "网页操作记录监视器",
+  "version": "1.0.0",
+  "description": "",
+  "icons": {
+    "16": "image/record16.png",
+    "48": "image/record48.png",
+    "64": "image/record64.png"
+  },
+  "browser_action": {
+    "default_title": "网页操作记录监视器",
+    "default_icon": "image/record16.png",
+    "default_popup": "html/popup.html"
+  },
+  "background" : {
+    "scripts": [
+      //底层库
+      "lib/script/jquery.min.js",
+      //工具方法
+      "scripts/bottom/constant_bt.js",
+      "scripts/bottom/fn_bt.js",
+      //普通中间层
+      "scripts/middle/storage_md.js",
+      "scripts/middle/message_md.js",
+      //插件中间层
+      "scripts/middle/background_md.js",
+      //插件
+      "scripts/plugin/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        //底层库
+        "lib/script/jquery.min.js",
+        //工具方法
+        "scripts/bottom/constant_bt.js",
+        "scripts/bottom/fn_bt.js",
+        //普通中间层
+        "scripts/middle/storage_md.js",
+        "scripts/middle/message_md.js",
+        //记录操作中间层
+        "scripts/middle/content_script_record_md.js",
+        //执行记录操作中间层
+        "scripts/middle/content_script_oper_md.js",
+        //插件中间层
+        "scripts/middle/content_script_md.js",
+        //插件
+        "scripts/plugin/content_scripts.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "http://*/*",
+    "storage"
+  ]
+}
+
+
+
